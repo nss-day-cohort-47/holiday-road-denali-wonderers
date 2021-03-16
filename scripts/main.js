@@ -6,10 +6,11 @@ import { makeParkList } from "./parks/ParkList.js"
 const showParkList = () => {
     loadPark()
     .then(parkArray =>{
-        makeParkList(parkArray)
+        console.log(parkArray.data)
+        makeParkList(parkArray.data)
     })
 }
-    showParkList();
+showParkList();
 
 //loadEatery()
 //.then(data => {console.log(data)})
