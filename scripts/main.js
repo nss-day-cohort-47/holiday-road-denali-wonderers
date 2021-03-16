@@ -5,6 +5,7 @@ import { makeEateryList } from "./eateries/EateryList.js"
 
 
 
+
 const showEateryList = () => {
     loadEatery()
     .then(eateryArray =>{
@@ -13,6 +14,16 @@ const showEateryList = () => {
     })
 }
     showEateryList();
+=======
+const showParkList = () => {
+    loadPark()
+    .then(parkArray =>{
+        console.log(parkArray.data)
+        makeParkList(parkArray.data)
+    })
+}
+showParkList();
+
 
 //loadEatery()
 //.then(data => {console.log(data)})
