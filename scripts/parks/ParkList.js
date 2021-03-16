@@ -1,3 +1,5 @@
+
+=======
 import { park } from "./Park.js"
 
 export const makeParkList = (parkArray) => {
@@ -11,3 +13,4 @@ const parkList = (allParks) =>{
     })
     parkElement.innerHTML = HTMLArray.join("");
 }
+
