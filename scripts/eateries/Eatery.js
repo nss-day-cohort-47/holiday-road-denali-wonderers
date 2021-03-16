@@ -1,4 +1,3 @@
-
 export const eatery = (eateryObject) => {
     `
   <div>
