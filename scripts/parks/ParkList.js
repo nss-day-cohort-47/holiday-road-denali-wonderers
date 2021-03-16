@@ -1,9 +1,13 @@
-const render = (parkData) => {
-    const parkDisplay = document.querySelector("#allparks");
- 
-    let HTMLArray = parkData.map(onePark => {
-      return //?LegoDetail?(onePark);
+import { park } from "./Park.js"
+
+export const makeParkList = (parkArray) =>{
+  parkList(parkArray)
+};
+
+const parkList = (allParks) =>{
+  const parkElement = document.querySelector(".allparks");
+    let HTMLArray = allParks.map(onePark => {
+        return park(onePark);
     })
-    //Since HTMLArray is an array, we can use join to make it a string
-    parkDisplay.innerHTML = HTMLArray.join("");
+    parkElement.innerHTML = HTMLArray.join("");
 }

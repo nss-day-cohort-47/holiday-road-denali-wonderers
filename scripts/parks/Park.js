@@ -1,13 +1,12 @@
-import {loadPark} from "./ParkProvider.js"
 
-let location = loadPark();
-
-export const park = `
+export const park = (parkObject) => {
+  `
 <div>
         <select>
-          <option value="${location}">${location}</option>
+          <option value="${parkObject}"> ${parkObject}</option>
           
         </select>
       </div>
-      `
-console.log(park);
+      `;
+}
+
