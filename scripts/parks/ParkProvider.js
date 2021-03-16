@@ -1,3 +1,4 @@
+
 import { settings } from "../Settings.js"
 
 export const loadPark = () => {
@@ -5,3 +6,4 @@ export const loadPark = () => {
     .then(response => response.json())
     
 };
+
