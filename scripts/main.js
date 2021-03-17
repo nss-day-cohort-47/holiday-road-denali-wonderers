@@ -16,7 +16,14 @@ const showEateryList = () => {
         makeEateryList(eateryArray)
     })
 }
-    showEateryList();
+
+const showAttractionList = () => {
+    loadAttraction()
+    .then(attractionArray =>{
+        console.log("Attraction Data",attractionArray)
+        makeAttractionList(attractionArray)
+    })
+}
 
 const showParkList = () => {
     loadPark()
@@ -35,15 +42,8 @@ const showWeatherList = () => {
     })
 }
 
-const showAttractionList = () => {
-    loadAttraction()
-    .then(attractionArray =>{
-        console.log(attractionArray.list)
-        makeAttractionList(attractionArray.list)
-    })
-}
 
-
+showEateryList();
 showParkList();
 showWeatherList();
 showAttractionList();
