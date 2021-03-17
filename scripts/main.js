@@ -68,14 +68,24 @@ navElement.addEventListener("change",event =>{
     }
 })
 
-navElement.addEventListener("click",event => {
-if (event.target.id ==="previewBox"){
-    event.preventDefault();
-    const parkEntry = document.querySelector("select[name='parkSelector']").value
 
-    const previewObject ={
-        park:parkEntry
-    }
-    createParkItinerary(previewObject)
+
+//
+//const dropdownElement = document.querySelector("body");
+
+//dropdownElement.addEventListener("click", (event) => {
+	//console.log('sugar is the devil');
+	
+	//if (event.target.id.startsWith("edit")) {
+		//console.log("post clicked", event.target.id.split("--"));
+		//console.log("zero index value", event.target.id.split("--")[0]);
+		//console.log("one index value, the id is", event.target.id.split("--")[1]);
+	//}
+//})
+
+var changedText = document.getElementById('changed');
+function listQ(){
+    changedText.textContent = this.value;
 }
-})
+document.getElementById("allParks").onchange = listQ;
+
