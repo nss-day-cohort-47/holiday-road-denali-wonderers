@@ -9,9 +9,6 @@ import {makeAttractionList} from "./attractions/AttractionList"
 
 
 
-
-
-
 const showEateryList = () => {
     loadEatery()
     .then(eateryArray =>{
