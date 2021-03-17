@@ -6,11 +6,13 @@ import { makeWeatherList } from "./weather/WeatherList.js"
 
 
 
+import { makeEateryList } from "./eateries/EateryList.js"
+
 
 const showEateryList = () => {
     loadEatery()
     .then(eateryArray =>{
-        console.log(eateryArray)
+        console.log("Eatery Array", eateryArray)
         makeEateryList(eateryArray)
     })
 }
