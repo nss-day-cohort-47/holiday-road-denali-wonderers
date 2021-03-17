@@ -1,5 +1,5 @@
 import { loadEatery } from "./eateries/EateryProvider.js"
-import { loadPark} from "./parks/ParkProvider.js"
+import { loadPark, createParkItinerary} from "./parks/ParkProvider.js"
 import {loadWeather} from "./weather/WeatherProvider.js"
 import {loadAttraction} from "./attractions/AttractionProvider.js"
 import { makeParkList} from "./parks/ParkList.js"
@@ -66,4 +66,16 @@ navElement.addEventListener("change",event =>{
         const parkValue = (event.target.value)
         console.log(`User wants to see the park: ${parkValue}`)
     }
+})
+
+navElement.addEventListener("click",event => {
+if (event.target.id ==="previewBox"){
+    event.preventDefault();
+    const parkEntry = document.querySelector("select[name='parkSelector']").value
+
+    const previewObject ={
+        park:parkEntry
+    }
+    createParkItinerary(previewObject)
+}
 })
