@@ -5,7 +5,7 @@ import {loadAttraction} from "./attractions/AttractionProvider.js"
 import { makeParkList} from "./parks/ParkList.js"
 import { makeEateryList } from "./eateries/EateryList.js"
 import { makeWeatherList } from "./weather/WeatherList.js"
-import {makeAttractionList} from "./attractions/AttractionList"
+import {makeAttractionList} from "./attractions/AttractionList.js"
 
 
 
@@ -17,7 +17,14 @@ const showEateryList = () => {
         makeEateryList(eateryArray)
     })
 }
-    showEateryList();
+
+const showAttractionList = () => {
+    loadAttraction()
+    .then(attractionArray =>{
+        console.log("Attraction Data",attractionArray)
+        makeAttractionList(attractionArray)
+    })
+}
 
 const showParkList = () => {
     loadPark()
@@ -36,15 +43,8 @@ const showWeatherList = () => {
     })
 }
 
-const showAttractionList = () => {
-    loadAttraction()
-    .then(attractionArray =>{
-        console.log(attractionArray.list)
-        makeAttractionList(attractionArray.list)
-    })
-}
 
-
+showEateryList();
 showParkList();
 showWeatherList();
 showAttractionList();
