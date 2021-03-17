@@ -26,8 +26,8 @@ const showParkList = () => {
 const showWeatherList = () => {
     loadWeather()
     .then(weatherArray =>{
-        console.log(weatherArray.data)
-        makeWeatherList(weatherArray.data)
+        console.log(weatherArray.list)
+        makeWeatherList(weatherArray.list)
     })
 }
 
