@@ -1,14 +1,15 @@
 import { loadEatery } from "./eateries/EateryProvider.js"
 import { loadPark} from "./parks/ParkProvider.js"
 import {loadWeather} from "./weather/WeatherProvider.js"
+import {loadAttraction} from "./attractions/AttractionProvider.js"
 import { makeParkList} from "./parks/ParkList.js"
 import { makeEateryList } from "./eateries/EateryList.js"
 import { makeWeatherList } from "./weather/WeatherList.js"
+import {makeAttractionList} from "./attractions/AttractionList"
 
 
 
 
-import { makeEateryList } from "./eateries/EateryList.js"
 
 
 const showEateryList = () => {
@@ -38,9 +39,18 @@ const showWeatherList = () => {
     })
 }
 
+const showAttractionList = () => {
+    loadAttraction()
+    .then(attractionArray =>{
+        console.log(attractionArray.list)
+        makeAttractionList(attractionArray.list)
+    })
+}
+
 
 showParkList();
 showWeatherList();
+showAttractionList();
 
 
 //loadEatery()
