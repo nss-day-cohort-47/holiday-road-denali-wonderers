@@ -1,5 +1,5 @@
 
-=======
+
 import { park } from "./Park.js"
 
 export const makeParkList = (parkArray) => {

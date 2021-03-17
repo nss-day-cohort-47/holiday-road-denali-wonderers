@@ -14,7 +14,7 @@ const showEateryList = () => {
     })
 }
     showEateryList();
-=======
+
 const showParkList = () => {
     loadPark()
     .then(parkArray =>{
