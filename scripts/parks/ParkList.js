@@ -1,3 +1,4 @@
+
 import { park } from "./Park.js"
 
 export const makeParkList = (parkArray) => {
@@ -6,9 +7,11 @@ export const makeParkList = (parkArray) => {
 
 const parkList = (allParks) =>{
   const parkElement = document.querySelector(".allParks");
-    let HTMLArray = allParks.map(onePark => {
+  let HTMLArray = allParks.map(onePark => {
+    // console.log(onePark)
         return park(onePark);
     })
-    parkElement.innerHTML = HTMLArray.join("");
+    // console.log(HTMLArray)
+    parkElement.innerHTML += HTMLArray.join("");
 }
 

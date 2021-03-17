@@ -1,8 +1,10 @@
 import { loadEatery } from "./eateries/EateryProvider.js"
 import { loadPark} from "./parks/ParkProvider.js"
 import {loadWeather} from "./weather/WeatherProvider.js"
+import { makeParkList} from "./parks/ParkList.js"
 import { makeEateryList } from "./eateries/EateryList.js"
 import { makeWeatherList } from "./weather/WeatherList.js"
+
 
 
 
@@ -13,6 +15,7 @@ const showEateryList = () => {
     loadEatery()
     .then(eateryArray =>{
         console.log("Eatery Array", eateryArray)
+
         makeEateryList(eateryArray)
     })
 }
@@ -20,11 +23,13 @@ const showEateryList = () => {
 
 const showParkList = () => {
     loadPark()
-    .then(parkArray =>{
-        console.log(parkArray.data)
-        makeParkList(parkArray.data)
+    .then(parkData =>{
+        // console.log("Parks Data",parkData.data)
+        makeParkList(parkData.data)
     })
 }
+
+
 const showWeatherList = () => {
     loadWeather()
     .then(weatherArray =>{
@@ -36,7 +41,6 @@ const showWeatherList = () => {
 
 showParkList();
 showWeatherList();
-
 
 
 //loadEatery()
