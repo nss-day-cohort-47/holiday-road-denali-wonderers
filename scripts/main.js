@@ -8,7 +8,6 @@ import { makeWeatherList } from "./weather/WeatherList.js"
 import {makeAttractionList} from "./attractions/AttractionList.js"
 
 
-
 const showEateryList = () => {
     loadEatery()
     .then(eateryArray =>{
