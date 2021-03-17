@@ -1,11 +1,10 @@
 export const park = (parkObject) => {
-  `
-<div>
+    `
+      <div>
         <select>
           <option value="${parkObject.data}"> ${parkObject.data}</option>
-          
         </select>
       </div>
-      `;
+    `;
 }
 
