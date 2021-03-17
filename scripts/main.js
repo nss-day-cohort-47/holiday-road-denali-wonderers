@@ -3,17 +3,24 @@ import { loadPark} from "./parks/ParkProvider.js"
 import {loadWeather} from "./weather/WeatherProvider.js"
 import { makeParkList} from "./parks/ParkList.js"
 import { makeEateryList } from "./eateries/EateryList.js"
+import { makeWeatherList } from "./weather/WeatherList.js"
 
+
+
+
+import { makeEateryList } from "./eateries/EateryList.js"
 
 
 const showEateryList = () => {
     loadEatery()
     .then(eateryArray =>{
-        // console.log(eateryArray)
+        console.log("Eatery Array", eateryArray)
+
         makeEateryList(eateryArray)
     })
 }
     showEateryList();
+
 const showParkList = () => {
     loadPark()
     .then(parkData =>{
@@ -22,24 +29,18 @@ const showParkList = () => {
     })
 }
 
+
+const showWeatherList = () => {
+    loadWeather()
+    .then(weatherArray =>{
+        console.log(weatherArray.list)
+        makeWeatherList(weatherArray.list)
+    })
+}
+
+
 showParkList();
-// const parkListToDOM = () => {
-//     const allParks = loadPark();
-//     const DOMLocation = document.querySelector(".allParks");
-//     let parkHTMLRep = "";
-
-//     for(const oneThingFromParkList of allParks){
-//         parkHTMLRep += makeParkList(oneThingFromParkList)
-//     }
-//     DOMLocation.innerHTML += parkHTMLRep;
-// }
-// parkListToDOM()
-
-// const parkListToDom = () =>{
-//     document.getElementById("allParks").innerHTML = showParkList()
-// }
-
-// parkListToDom();
+showWeatherList();
 
 
 //loadEatery()
