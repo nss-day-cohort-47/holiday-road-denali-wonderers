@@ -57,3 +57,14 @@ showAttractionList();
 //loadWeather()
 //.then(data => {console.log(data)})
 
+/////-----Event Listeners------////////
+
+
+const navElement = document.querySelector("body");
+
+navElement.addEventListener("change",event =>{
+    if(event.target.id === "allParks") {
+        const parkValue = (event.target.value)
+        console.log(`User wants to see the park: ${parkValue}`)
+    }
+})
