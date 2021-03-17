@@ -1,14 +1,16 @@
 
 
-=======
+
 export const park = (parkObject) => {
-  `
-<div>
-        <select>
-          <option value="${parkObject.data}"> ${parkObject.data}</option>
-          
-        </select>
-      </div>
+  // console.log(parkObject.fullName)
+  return `
+  <div>
+  <select>
+  <option value="${parkObject.fullName}"> ${parkObject.fullName}</option>
+  
+  </select>
+  </div>
       `;
 }
+
 
