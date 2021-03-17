@@ -1,3 +1,4 @@
+
 export const weather = (weatherObject) => { 
   console.log(weatherObject)
     return `
@@ -9,8 +10,8 @@ export const weather = (weatherObject) => {
             <p>${weatherObject.main.temp_max}</p>
             
           </aside>
+
         </div>
         `;
-  }
-  
-  
+}
+
