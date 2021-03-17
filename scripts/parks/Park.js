@@ -1,6 +1,3 @@
-
-
-
 export const park = (parkObject) => {
     `
       <div>
