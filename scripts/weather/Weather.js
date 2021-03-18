@@ -1,15 +1,17 @@
+
 export const weather = (weatherObject) => { 
+  console.log(weatherObject)
     return `
   <div>
-          <select>
-            <option value="${weatherObject.list}"> ${weatherObject.list}</option>
-            h4>${weatherObject.clouds}</h4>
-            <p>${weatherObject.main}</p>
-            <p>${weatherObject.weather}</p>
+          <aside>
+            <h3>${weatherObject.main.grnd_level}</h3>
+            <h4>${weatherObject.main.temp}</h4>
+            <p>${weatherObject.main.feels_like}</p>
+            <p>${weatherObject.main.temp_max}</p>
             
-          </select>
+          </aside>
+
         </div>
         `;
-  }
-  
-  
+}
+

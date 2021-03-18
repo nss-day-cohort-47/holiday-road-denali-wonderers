@@ -9,5 +9,5 @@ const eateryList = (allEateries) =>{
     let HTMLArray = allEateries.map(oneEatery => {
         return eatery(oneEatery);
     })
-    eateryElement.innerHTML = HTMLArray.join("");
+    eateryElement.innerHTML += HTMLArray.join("");
 }
