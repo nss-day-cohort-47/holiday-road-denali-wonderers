@@ -28,7 +28,7 @@ const showAttractionList = () => {
 const showParkList = () => {
     loadPark()
     .then(parkData =>{
-        // console.log("Parks Data",parkData.data)
+        console.log("Parks Data",parkData.data)
         makeParkList(parkData.data)
     })
 }
