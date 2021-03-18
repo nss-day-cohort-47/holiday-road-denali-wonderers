@@ -82,8 +82,23 @@ navElement.addEventListener("change",event =>{
 	//}
 //})
 
+//making parks click dropdown show up lower on page
 var changedText = document.getElementById('changed');
 function listQ(){
     changedText.textContent = this.value;
 }
 document.getElementById("allParks").onchange = listQ;
+
+//making eateries click dropdown show up lower on page
+var eatchangedText = document.getElementById('eatchanged');
+function listR(){
+    eatchangedText.textContent = this.value;
+}
+document.getElementById("allEateries").onchange = listR;
+
+//making bizarrrrrr click dropdown show up lower on page
+var attractionchangedText = document.getElementById('attractionchanged');
+function listS(){
+    attractionchangedText.textContent = this.value;
+}
+document.getElementById("allAttractions").onchange = listS;
