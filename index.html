@@ -27,7 +27,7 @@
                   </button>
                   <div class="dropdown-content">
                     <a href="#">
-                      <select class= "allParks" id = "allParks">
+                      <select name= "parkSelector" class= "allParks" id = "allParks">
                         <option value ="">Choose a Park!</option>
                       </select>
                     </a>
@@ -40,8 +40,10 @@
                     </button>
                     <div class="dropdown-content">
                       <a href="#">
-                          <select class= "allEateries">
-                              <option value="">Choose an Eatery!</option>
+
+                          <select name= "eaterySelector" class= "allEateries" id = "allEateries">
+                              <option value= "">Choose an Eatery!</option>
+
                           </select>
                       </a>
                     </div>
@@ -51,11 +53,13 @@
                       <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                      <a href="#">
-                        <select class="allAttractions">
-                          <option value="">Choose an Attraction!</option>
-                        </select>
+
+                      <a href="#"> 
+                      <select name= "attractionSelector" class ="allAttractions" id = "allAttractions">
+                        <option value="">Choose an Attraction</option>
+                      </select>
                       </a>
+
                     </div>
                   </div>
               </div>
@@ -88,6 +92,7 @@
         <p>Green travel is a broad term with two main branches: It refers first and foremost to responsible travel practices that pay attention to environmental, social, and economic sustainability. It can also refer to eco-tourism, which involves responsible travel specifically to natural areas.</p>
       </div>
     </div>
+<<<<<<< HEAD
     
     <br>
     <h2>Your journey begins in: <span class="makeNashvilleBigger">NASVILLE, TENNESSEE</span></h2>
@@ -99,6 +104,30 @@
     </p>
     
     <!-- <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '4644585',appid: 'cff7441f9dae84b92b87ae354dd81450',units: 'imperial',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script> -->
+=======
+</div>
+
+<br>
+<h2>Your journey begins in: <span class="makeNashvilleBigger">NASVILLE, TENNESSEE</span></h2>
+
+<br>
+
+<p>
+  Here's where I'm headed!... <spam  id="changed"></spam>
+</p>
+
+>>>>>>> d50c3388cb97e92f6976c28d2aff275a32e264fd
+
+<p>
+  Here's where I'm eating!... <spam id="eatchanged"></spam>
+</p>
+
+<p>
+  Here's where I want to see!... <spam id="attractionchanged"></spam>
+</p>
+<fieldset>
+  <input id="saveItinerary" type="submit" value="Save Itinerary">
+</fieldset>
 
     <script type="module" src="./scripts/main.js"></script>
     
