@@ -105,3 +105,21 @@ function listS(){
 }
 document.getElementById("allAttractions").onchange = listS;
 
+
+navElement.addEventListener("click", event =>{
+	if (event.target.id ==="saveItinerary") {
+		event.preventDefault();
+		const parkEntry = document.querySelector("select[name='parkSelector']").value
+		const eateryEntry = document.querySelector("select[name='eaterySelector']").value
+		const attractionEntry = document.querySelector("select[name='attractionSelector']").value
+	
+		
+		const parkObject = {
+			park: parkEntry,
+			eatery: eateryEntry,
+			attraction:attractionEntry
+	
+		}
+		createParkItinerary(parkObject)
+	}
+})

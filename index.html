@@ -27,7 +27,7 @@
                   </button>
                   <div class="dropdown-content">
                     <a href="#">
-                      <select class= "allParks" id = "allParks">
+                      <select name= "parkSelector" class= "allParks" id = "allParks">
                         <option value ="">Choose a Park!</option>
                       </select>
                     </a>
@@ -41,7 +41,7 @@
                     <div class="dropdown-content">
                       <a href="#">
 
-                          <select class= "allEateries" id = "allEateries">
+                          <select name= "eaterySelector" class= "allEateries" id = "allEateries">
                               <option value= "">Choose an Eatery!</option>
 
                           </select>
@@ -55,7 +55,7 @@
                     <div class="dropdown-content">
 
                       <a href="#"> 
-                      <select class ="allAttractions" id = "allAttractions">
+                      <select name= "attractionSelector" class ="allAttractions" id = "allAttractions">
                         <option value="">Choose an Attraction</option>
                       </select>
                       </a>
@@ -98,7 +98,7 @@
 <br>
 
 <p>
-  Here's where I'm headed!... <spam id="changed"></spam>
+  Here's where I'm headed!... <spam  id="changed"></spam>
 </p>
 
 
@@ -109,7 +109,9 @@
 <p>
   Here's where I want to see!... <spam id="attractionchanged"></spam>
 </p>
-
+<fieldset>
+  <input id="saveItinerary" type="submit" value="Save Itinerary">
+</fieldset>
 
     <script type="module" src="./scripts/main.js"></script>
     
