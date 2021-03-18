@@ -1,10 +1,19 @@
 
 import { settings } from "../Settings.js"
 
+let apiParks = [];
+
+export const useParks = () => {
+  return [...apiParks]
+}
+
 export const loadPark = () => {
     return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${settings.npsKey}`)
     .then(response => response.json())
-    
+    .then((parkArray) => {
+        apiParks = parkArray.data
+        return parkArray.data
+    })
 }; 
 
 export const createParkItinerary = parkObj =>{
