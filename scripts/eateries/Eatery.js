@@ -5,3 +5,16 @@ export const eatery = (eateryObject) => {
         </div>
         `;
 }
+
+export const eateryDetail = (eateryObject) => {
+  return `
+  <div>
+  <aside>
+  <p>${eateryObject.description}</p>
+  <p>${eateryObject.ameneties}</p>
+  <p>${eateryObject.state}</p>
+  <p>${eateryObject.city}</p>
+  </aside>
+  </div>
+  `;
+}

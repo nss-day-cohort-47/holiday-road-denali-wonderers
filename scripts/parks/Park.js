@@ -7,4 +7,17 @@ export const park = (parkObject) => {
       `;
 }
 
+export const parkDetail = (parkObject) => {
+  return `
+  <div>
+  <aside>
+  <p>${parkObject.addresses}</p>
+  <p>${parkObject.contacts}</p>
+  <p>${parkObject.activities}</p>
+  <p>${parkObject.operatingHours}</p>
+  </aside>
+  </div>
+  `;
+}
+
 

@@ -1,11 +1,15 @@
 import { loadEatery } from "./eateries/EateryProvider.js"
-import { loadPark, createParkItinerary} from "./parks/ParkProvider.js"
+import { loadPark, createParkItinerary, useParks } from "./parks/ParkProvider.js"
 import {loadWeather} from "./weather/WeatherProvider.js"
 import {loadAttraction} from "./attractions/AttractionProvider.js"
 import { makeParkList} from "./parks/ParkList.js"
 import { makeEateryList } from "./eateries/EateryList.js"
 import { makeWeatherList } from "./weather/WeatherList.js"
 import {makeAttractionList} from "./attractions/AttractionList.js"
+import { parkDetail } from "./parks/Park.js"
+import { eateryDetail } from "./eateries/Eatery.js"
+import { attractionDetail } from "./attractions/Attraction.js"
+
 
 
 const showEateryList = () => {
@@ -28,8 +32,8 @@ const showAttractionList = () => {
 const showParkList = () => {
     loadPark()
     .then(parkData =>{
-        // console.log("Parks Data",parkData.data)
-        makeParkList(parkData.data)
+        console.log("Parks Data",parkData)
+        makeParkList(parkData)
     })
 }
 
@@ -60,13 +64,58 @@ showAttractionList();
 
 
 const navElement = document.querySelector("body");
+let parkValue = ""
+let eateryValue = ""
+let attractionValue = ""
 
 navElement.addEventListener("change",event =>{
     if(event.target.id === "allParks") {
-        const parkValue = (event.target.value)
+        parkValue = (event.target.value)
         console.log(`User wants to see the park: ${parkValue}`)
     }
 })
+
+const applicationElement = document.querySelector("body")
+
+applicationElement.addEventListener("click", (event) => {
+    if (event.target.id.startsWith("details1")) {
+        const singleParkObject = useParks().find(oneParkObject => {
+            if (parkValue === oneParkObject.fullName) {
+                return oneParkObject
+            } 
+        })
+        parkDetail(singleParkObject);
+        console.log("post clicked", event.target.id)
+        console.log(parkDetail(singleParkObject))
+    }
+})
+
+applicationElement.addEventListener("click", (event) => {
+    if (event.target.id.startsWith("details2")) {
+        const singleEateryObject = useEateries().find(oneEateryObject => {
+            if (eateryValue === oneEateryObject.fullName) {
+                return oneEateryObject
+            } 
+        })
+        eateryDetail(singleEateryObject);
+        console.log("post clicked", event.target.id)
+        console.log(eateryDetail(singleEateryObject))
+    }
+})
+
+applicationElement.addEventListener("click", (event) => {
+    if (event.target.id.startsWith("details3")) {
+        const singleAttractionObject = useAttractions().find(oneAttractionObject => {
+            if (attractionValue === oneAttractionObject.fullName) {
+                return oneAttractionObject
+            } 
+        })
+        attractionDetail(singleAttractionObject);
+        console.log("post clicked", event.target.id)
+        console.log(attractionDetail(singleAttractionObject))
+    }
+})
+
 
 
 
