@@ -36,10 +36,10 @@ const showParkList = () => {
 
 const showWeatherList = () => {
     loadWeather()
-    .then(weatherArray =>{
-        console.log(weatherArray.list)
-        makeWeatherList(weatherArray.list)
-    })
+    // .then(weatherArray =>{
+    //     console.log(weatherArray.list)
+    //     makeWeatherList(weatherArray.list)
+    // })
 }
 
 
