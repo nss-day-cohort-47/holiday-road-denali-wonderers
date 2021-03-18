@@ -1,15 +1,14 @@
 
-export const weather = (weatherObject) => { 
+export const weather = (weatherObject) => {
   console.log(weatherObject)
-    return `
+return `
   <div>
           <aside>
-            <h3>${weatherObject.main.grnd_level}</h3>
-            <h4>${weatherObject.main.temp}</h4>
-            <p>${weatherObject.main.feels_like}</p>
-            <p>${weatherObject.main.temp_max}</p>
-            
-          </aside>
+            <h3>Main Temp: ${weatherObject.main.temp}</h3>
+            <h4>What if feels like: ${weatherObject.main.feels_like}</h4>
+            <p>Min Temp: ${weatherObject.main.temp_min}</p>
+            <p>Max Temp: ${weatherObject.main.temp_max}</p>
+            </aside>
 
         </div>
         `;
