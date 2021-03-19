@@ -38,7 +38,7 @@ const showParkList = () => {
     })
 }
 
-
+let cityWeatherValue = ""
 const showWeatherList = () => {
     loadWeather()
     // .then(weatherArray =>{
@@ -68,11 +68,19 @@ const navElement = document.querySelector("body");
 let parkValue = ""
 let eateryValue = ""
 let attractionValue = ""
+// let cityWeatherValue = ""
 
 navElement.addEventListener("change",event =>{
     if(event.target.id === "allParks") {
         parkValue = (event.target.value)
         console.log(`User wants to see the park: ${parkValue}`)
+        const oneParkObject = useParks().find(singleParkObject => {
+            if (parkValue === singleParkObject.fullName) {
+                return singleParkObject
+            } 
+        })
+        cityWeatherValue = oneParkObject.addresses[0].city
+        console.log(cityWeatherValue)
     }
 })
 
