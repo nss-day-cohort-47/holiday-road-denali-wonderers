@@ -170,29 +170,29 @@ body {
 	border: 1px solid;
 	padding: 10px;
 	margin-left: 10px;
-	box-shadow: 10px 5px 5px red;
+	box-shadow: 10px 5px 5px dimgray;
   }
   .itineraryPost{
 	
 	  border: solid;
 	  margin-left: 10px;
-	
+  }
 
 
 
-  #details1{
+  #details1 {
 	background-color: darkseagreen;
 	border: 2px solid black;
 	transition-duration: 0.4s;
   }
 
-  #details2{
+  #details2 {
 	background-color:darkseagreen;
 	border: 2px solid black;
 	transition-duration: 0.4s;
   }
 
-  #details3{
+  #details3 {
 	background-color: darkseagreen;
 	border: 2px solid black;
 	transition-duration: 0.4s;
@@ -235,4 +235,35 @@ body {
   #attractionchanged {
 	color:brown;
 
+  }
+
+  #footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;  
+  }
+
+a {
+	color:darkseagreen;
+}
+
+
+  a:link {
+	color:darkseagreen;
+  }
+  
+  /* visited link */
+  a:visited {
+	color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+	color: orange;
+  }
+  
+  /* selected link */
+  a:active {
+	color: darkorange;
   }
