@@ -171,6 +171,9 @@ navElement.addEventListener("click", event =>{
 	
 		}
 		createParkItinerary(parkObject)
+        .then(response => {
+            location.reload(true);
+        })
 	}
 })
 
