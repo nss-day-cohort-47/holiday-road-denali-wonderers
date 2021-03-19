@@ -10,8 +10,8 @@ import { settings } from "../Settings.js"
 //     }) 
 // };
 
-export const loadWeather = () => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=nashville&appid=${settings.weatherKey}`)
+export const loadWeather = (cityWeatherValue) => {
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityWeatherValue}&appid=${settings.weatherKey}`)
     .then(response => response.json())
     .then(parkWeather =>{
         console.log(parkWeather.list,"this is the park list")
