@@ -93,7 +93,7 @@ applicationElement.addEventListener("click", event => {
 applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("details2")) {
         const singleEateryObject = useEateries().find(oneEateryObject => {
-            if (eateryValue === oneEateryObject.fullName) {
+            if (eateryValue === oneEateryObject.businessName) {
                 return oneEateryObject
             } 
         })
@@ -106,7 +106,7 @@ applicationElement.addEventListener("click", event => {
 applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("details3")) {
         const singleAttractionObject = useAttractions().find(oneAttractionObject => {
-            if (attractionValue === oneAttractionObject.fullName) {
+            if (attractionValue === oneAttractionObject.name) {
                 return oneAttractionObject
             } 
         })
