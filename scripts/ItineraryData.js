@@ -8,11 +8,20 @@ export const getItinerary = () => {
 export const itineraryBox = (itineraryObject) => {
     return `
     <div class="itineraryPost"> 
-    <ul>
+    <ul> Itinerary:
+     ${itineraryObject.id}
     <li>${itineraryObject.park}</li>
     <li>${itineraryObject.eatery} </li>
     <li>${itineraryObject.attraction} </li>
     </ul>
     </div>
     `
+}
+
+ export const itineraryList = (allItineraries) => {
+    let intineraryHTML = "";
+    for ( const itineraryObject of allItineraries){
+        intineraryHTML += itineraryBox(itineraryObject)
+    }
+    return intineraryHTML
 }

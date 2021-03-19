@@ -9,7 +9,7 @@ import {makeAttractionList} from "./attractions/AttractionList.js"
 import { parkDetail } from "./parks/Park.js"
 import { eateryDetail } from "./eateries/Eatery.js"
 import { attractionDetail } from "./attractions/Attraction.js"
-import { getItinerary, itineraryBox } from "./ItineraryData.js"
+import { getItinerary, itineraryBox, itineraryList } from "./ItineraryData.js"
 
 
 
@@ -181,6 +181,8 @@ navElement.addEventListener("click", event =>{
 
 const showItinerary = () =>{
 const itineraryElement = document.querySelector(".itineraryBox");
-itineraryElement.innerHTML = itineraryBox();
+getItinerary().then((allItineraries)=> {
+itineraryElement.innerHTML = itineraryList(allItineraries); ;
+})
 }
 showItinerary();
