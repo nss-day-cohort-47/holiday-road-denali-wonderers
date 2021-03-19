@@ -164,6 +164,21 @@ body {
 	color:brown;
   }
 
+  #itinerarySection{
+    display: flex;
+    width:50%;
+	border: 1px solid;
+	padding: 10px;
+	margin-left: 10px;
+	box-shadow: 10px 5px 5px red;
+  }
+  .itineraryPost{
+	
+	  border: solid;
+	  margin-left: 10px;
+	
+
+
 
   #details1{
 	background-color: darkseagreen;
@@ -219,4 +234,5 @@ body {
 
   #attractionchanged {
 	color:brown;
+
   }
