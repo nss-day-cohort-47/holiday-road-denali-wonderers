@@ -9,6 +9,7 @@ import {makeAttractionList} from "./attractions/AttractionList.js"
 import { parkDetail } from "./parks/Park.js"
 import { eateryDetail } from "./eateries/Eatery.js"
 import { attractionDetail } from "./attractions/Attraction.js"
+import { getItinerary, itineraryBox } from "./ItineraryData.js"
 
 
 
@@ -172,3 +173,14 @@ navElement.addEventListener("click", event =>{
 		createParkItinerary(parkObject)
 	}
 })
+
+// getItinerary()
+// .then(data => {
+//     console.log("Itinerary Data", data)
+// })
+
+const showItinerary = () =>{
+const itineraryElement = document.querySelector(".itineraryBox");
+itineraryElement.innerHTML = itineraryBox();
+}
+showItinerary();
