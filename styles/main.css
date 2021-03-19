@@ -163,3 +163,60 @@ body {
 	font-size: 1.2em veranda;
 	color:brown;
   }
+
+
+  #details1{
+	background-color: darkseagreen;
+	border: 2px solid black;
+	transition-duration: 0.4s;
+  }
+
+  #details2{
+	background-color:darkseagreen;
+	border: 2px solid black;
+	transition-duration: 0.4s;
+  }
+
+  #details3{
+	background-color: darkseagreen;
+	border: 2px solid black;
+	transition-duration: 0.4s;
+  }
+
+  #details1:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+  }
+
+  #details2:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+  }
+
+  #details3:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+  }
+
+  #saveItinerary {
+	background-color: darkorange;
+	border: 2px solid black;
+	transition-duration: 0.4s;
+  }
+
+  #saveItinerary:hover {
+	 color: black; 
+	 background-color:#4CAF50 ;
+  }
+
+  #changed {
+	color:brown;
+  }
+
+  #eatchanged{
+	color:brown;
+  }
+
+  #attractionchanged {
+	color:brown;
+  }
