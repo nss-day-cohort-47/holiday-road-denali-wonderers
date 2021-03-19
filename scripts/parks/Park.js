@@ -11,10 +11,11 @@ export const parkDetail = (parkObject) => {
   return `
   <div>
   <aside>
-  <p>${parkObject.addresses}</p>
-  <p>${parkObject.contacts}</p>
-  <p>${parkObject.activities}</p>
-  <p>${parkObject.operatingHours}</p>
+  <p>Address: ${parkObject.addresses[0].city}, ${parkObject.addresses[0].stateCode}, ${parkObject.addresses[0].postalCode}</p>
+  <p>Contact Info: ${parkObject.contacts.phoneNumbers[0].phoneNumber}</p>
+  <p>Activities: ${parkObject.activities[0].name}, ${parkObject.activities[1].name}, ${parkObject.activities[4].name}</p>
+  <p>Hours: 
+  Mon-Sun: ${parkObject.operatingHours[0].standardHours.wednesday}</p>
   </aside>
   </div>
   `;

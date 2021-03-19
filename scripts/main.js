@@ -86,7 +86,7 @@ navElement.addEventListener("change",event =>{
 
 const applicationElement = document.querySelector("body")
 
-applicationElement.addEventListener("click", (event) => {
+applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("details1")) {
         const singleParkObject = useParks().find(oneParkObject => {
             if (parkValue === oneParkObject.fullName) {
@@ -99,7 +99,7 @@ applicationElement.addEventListener("click", (event) => {
     }
 })
 
-applicationElement.addEventListener("click", (event) => {
+applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("details2")) {
         const singleEateryObject = useEateries().find(oneEateryObject => {
             if (eateryValue === oneEateryObject.fullName) {
@@ -112,7 +112,7 @@ applicationElement.addEventListener("click", (event) => {
     }
 })
 
-applicationElement.addEventListener("click", (event) => {
+applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("details3")) {
         const singleAttractionObject = useAttractions().find(oneAttractionObject => {
             if (attractionValue === oneAttractionObject.fullName) {
