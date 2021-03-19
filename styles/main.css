@@ -238,10 +238,13 @@ body {
   }
 
   #footer{
-	position: absolute;
+	display: flex;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 2.5rem;  
+	height: 2.5rem;
+	background-color: darkorange;
+	justify-content: space-evenly;  
   }
 
 a {
@@ -250,7 +253,7 @@ a {
 
 
   a:link {
-	color:darkseagreen;
+	color:lightgreen;
   }
   
   /* visited link */
