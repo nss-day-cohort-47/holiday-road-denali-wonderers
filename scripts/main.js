@@ -1,7 +1,7 @@
-import { loadEatery } from "./eateries/EateryProvider.js"
+import { loadEatery, useEateries } from "./eateries/EateryProvider.js"
 import { loadPark, createParkItinerary, useParks } from "./parks/ParkProvider.js"
-import {loadWeather} from "./weather/WeatherProvider.js"
-import {loadAttraction} from "./attractions/AttractionProvider.js"
+import { loadWeather } from "./weather/WeatherProvider.js"
+import { loadAttraction, useAttractions } from "./attractions/AttractionProvider.js"
 import { makeParkList} from "./parks/ParkList.js"
 import { makeEateryList } from "./eateries/EateryList.js"
 import { makeWeatherList } from "./weather/WeatherList.js"
@@ -102,7 +102,7 @@ applicationElement.addEventListener("click", event => {
 applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("details2")) {
         const singleEateryObject = useEateries().find(oneEateryObject => {
-            if (eateryValue === oneEateryObject.fullName) {
+            if (eateryValue === oneEateryObject.businessName) {
                 return oneEateryObject
             } 
         })
@@ -115,7 +115,7 @@ applicationElement.addEventListener("click", event => {
 applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("details3")) {
         const singleAttractionObject = useAttractions().find(oneAttractionObject => {
-            if (attractionValue === oneAttractionObject.fullName) {
+            if (attractionValue === oneAttractionObject.name) {
                 return oneAttractionObject
             } 
         })
