@@ -82,6 +82,24 @@ navElement.addEventListener("change",event =>{
         cityWeatherValue = oneParkObject.addresses[0].city
         console.log(cityWeatherValue)
     }
+    if(event.target.id === "allEateries") {
+        eateryValue = (event.target.value)
+        console.log(`User wants to see the eatery: ${eateryValue}`)
+        const oneEateryObject = useEateries().find(singleEateryObject => {
+            if (eateryValue === singleEateryObject.businessName) {
+                return singleEateryObject
+            } 
+        })
+    }
+    // if(event.target.id === "allEateries") {
+    //     eateryValue = (event.target.value)
+    //     console.log(`User wants to see the eatery: ${eateryValue}`)
+    //     const oneEateryObject = useEateries().find(singleEateryObject => {
+    //         if (eateryValue === singleEateryObject.businessName) {
+    //             return singleEateryObject
+    //         } 
+    //     })
+    // }
 })
 
 const applicationElement = document.querySelector("body")
@@ -99,16 +117,21 @@ applicationElement.addEventListener("click", event => {
     }
 })
 
+// Listen for a click on the eatery detail button
 applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("details2")) {
+        // Find the eatery onject based on the selected value
         const singleEateryObject = useEateries().find(oneEateryObject => {
             if (eateryValue === oneEateryObject.businessName) {
                 return oneEateryObject
             } 
         })
-        eateryDetail(singleEateryObject);
-        console.log("post clicked", event.target.id)
-        console.log(eateryDetail(singleEateryObject))
+        // Find place on dom to put HTMLRep of details
+        const eateryDetailsIdElement = document.querySelector("#eateryDetails")
+        // Pass in eatery object into eatery detail which returns HTMLrep
+        const HTMLRep = eateryDetail(singleEateryObject)
+        // Set inner HTML of eatery details to the HTMLRep
+        eateryDetailsIdElement.innerHTML = HTMLRep
     }
 })
 
