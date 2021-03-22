@@ -91,6 +91,15 @@ navElement.addEventListener("change",event =>{
             } 
         })
     }
+    if(event.target.id === "allAttractions") {
+        attractionValue = (event.target.value)
+        console.log(`User wants to see the attraction: ${attractionValue}`)
+        const oneAttractionObject = useAttractions().find(singleAttractionObject => {
+            if (attractionValue === singleAttractionObject.name) {
+                return singleAttractionObject
+            } 
+        })
+    }
     // if(event.target.id === "allEateries") {
     //     eateryValue = (event.target.value)
     //     console.log(`User wants to see the eatery: ${eateryValue}`)
@@ -111,9 +120,9 @@ applicationElement.addEventListener("click", event => {
                 return oneParkObject
             } 
         })
-        parkDetail(singleParkObject);
-        console.log("post clicked", event.target.id)
-        console.log(parkDetail(singleParkObject))
+        const parkDetailsIdElement = document.querySelector("#parkDetails")
+        const parkHTMLRep = parkDetail(singleParkObject)
+        parkDetailsIdElement.innerHTML = parkHTMLRep
     }
 })
 
@@ -129,9 +138,9 @@ applicationElement.addEventListener("click", event => {
         // Find place on dom to put HTMLRep of details
         const eateryDetailsIdElement = document.querySelector("#eateryDetails")
         // Pass in eatery object into eatery detail which returns HTMLrep
-        const HTMLRep = eateryDetail(singleEateryObject)
+        const eateryHTMLRep = eateryDetail(singleEateryObject)
         // Set inner HTML of eatery details to the HTMLRep
-        eateryDetailsIdElement.innerHTML = HTMLRep
+        eateryDetailsIdElement.innerHTML = eateryHTMLRep
     }
 })
 
@@ -142,7 +151,9 @@ applicationElement.addEventListener("click", event => {
                 return oneAttractionObject
             } 
         })
-        attractionDetail(singleAttractionObject);
+        const attractionDetailsIdElement = document.querySelector("#attractionDetails")
+        const attractionHTMLRep = attractionDetail(singleAttractionObject)
+        attractionDetailsIdElement.innerHTML = attractionHTMLRep
         console.log("post clicked", event.target.id)
         console.log(attractionDetail(singleAttractionObject))
     }
