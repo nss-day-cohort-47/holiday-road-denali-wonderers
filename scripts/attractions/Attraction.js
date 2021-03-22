@@ -7,13 +7,16 @@ export const attraction = (attractionObject) => {
     }
 
 export const attractionDetail = (attractionObject) => {
+    let ameneties = ""
+  for (const property in attractionObject.ameneties){
+    ameneties += `<p>${property}: ${attractionObject.ameneties[property]}</p>`
+  }
      return `
     <div>
     <aside>
-    <p>${attractionObject.description}</p>
-    <p>${attractionObject.ameneties}</p>
-    <p>${attractionObject.state}</p>
-    <p>${attractionObject.city}</p>
+    <p>Description: ${attractionObject.description}</p>
+    <p>Ameneties: ${ameneties}</p>
+    <p>Location: ${attractionObject.city}, ${attractionObject.state}</p>
     </aside>
     </div>
     `;

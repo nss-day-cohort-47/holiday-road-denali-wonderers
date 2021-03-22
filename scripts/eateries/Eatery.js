@@ -14,10 +14,9 @@ export const eateryDetail = (eateryObject) => {
   return `
   <div>
   <aside>
-  <p>${eateryObject.description}</p>
-  <p>${ameneties}</p>
-  <p>${eateryObject.state}</p>
-  <p>${eateryObject.city}</p>
+  <p>Description: ${eateryObject.description}</p>
+  <p>Ameneties: ${ameneties}</p>
+  <p>Location: ${eateryObject.city}, ${eateryObject.state}</p>
   </aside>
   </div>
   `;
